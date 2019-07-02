@@ -1,0 +1,576 @@
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.main {
+    width: 1226px;
+    margin: 0 auto;
+    /* background: red; */
+}
+img{
+    vertical-align: top;
+}
+.header {
+    background: #333;
+}
+
+.header .nav {
+    float: left;
+}
+
+.header .nav li,
+.header .login li {
+    float: left;
+    line-height: 40px;
+}
+
+.header .nav li a,
+.header .login li a {
+    line-height: 12px;
+    font-size: 12px;
+    display: block;
+    color: #b0b0b0;
+    padding: 0 10px;
+    margin: 14px 0;
+    border-right: 1px solid #b0b0b0;
+}
+
+.header .nav li:last-child a,
+.header .login li:last-child a {
+    border-right: none;
+}
+
+.header .login {
+    float: right;
+}
+
+.header .buyCar {
+    float: right;
+}
+
+.header .buyCar>span {
+    display: block;
+    line-height: 40px;
+    font-size: 12px;
+    color: #b0b0b0;
+    background: url(../img/1.jpg) no-repeat left;
+    background-size: 18px;
+    padding-left: 22px;
+}
+
+.header .buyCar:hover>span {
+    color: #f1671b;
+    cursor: pointer;
+    background-image: url(../img/2.jpg);
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.header .nav li a:hover,
+.header .login li a:hover {
+    color: #FFF;
+}
+
+/* header部分 */
+
+header h1 {
+    width: 55px;
+    height: 55px;
+    background: #ff6700 url(../img/mi-logo.png) no-repeat center center;
+    background-size: 30px 20px;
+    margin-right: 200px;
+}
+
+header h1 a {
+    display: block;
+    text-indent: -9999px;
+    height: 55px;
+}
+
+header.headerBottom {
+    margin-top: 22px;
+}
+
+header .nav {}
+
+header .nav li {
+    float: left;
+    line-height: 55px;
+    font-size: 16px;
+    padding: 0 10px;
+    color: #333;
+}
+
+header .nav li a {
+    color: #333;
+}
+header .nav li a:hover{
+    color: #ff6700;
+}
+
+
+
+/* 购物车 */
+        .header .buyCar{
+          margin: 0 auto;
+          width: 80px;
+          background:  #424242;
+          position: relative;
+         padding: 0 10px;
+         
+       }
+       .header .buyCar:hover{
+           background: #fff;
+       }
+       .buyCar>span{
+           display: block;
+           width: 50px;
+           line-height: 40px;
+           background: red;
+           color: aliceblue;
+           text-align: center; 
+        
+       }
+       .header .buyCar .detail{
+           width: 300px;
+           height:100px;
+           background:white;
+           display: none;
+           position: absolute;
+           right: 0;
+           line-height: 100px;
+            border: 1px solid #ccc;
+           border-top: none; 
+           z-index: 10;
+           
+           /* box-shadow: 0 0 1px #000; */
+
+       }
+        .header .buyCar:hover .detail{
+           display: block;
+           font-size: 12px;
+           text-align: center;
+           color: #000;
+          
+       }
+      
+    /* banner start */
+    .banner{
+        overflow: hidden;
+        position: relative;
+        margin-top: 22px;
+    }
+    .banner .bannerImg{
+        width:400%;
+    }
+    .banner .bannerImg li{
+        /* 当不设置块元素的宽度时 块元素的宽度继承父元素的宽度 */
+        width: 25%;   
+        float: left;
+    }
+    .banner .bannerImg li img{
+        width: 100%;
+    }
+    .banner .bannerDot{
+         position: absolute;
+         right: 20px;
+         top: 420px;
+    }
+    .banner .bannerDot li{
+        width: 5px;
+        height: 5px;
+        border: 2px solid #333;
+        background: #ccc;
+        border-radius: 50%;
+        float: left;
+        margin: 0 5px;
+        cursor: pointer; 
+    }
+    .banner .bannerDot li:hover{
+        background: #FFF
+    }
+    .banner .bannerLeft{
+        position: absolute;
+        left: 0;
+        top: 0;
+        background: #333;
+        color: #fff;
+        padding: 20px 0;
+    }
+    /* 图片的高度就是banner 高度 460px
+       460px由10个li高度和左侧黑框的padding组成
+    */
+    .banner .bannerLeft li{
+
+    }
+    .banner .bannerLeft li>span{
+        display: block;
+        line-height: 42px;
+        cursor: pointer;
+        padding: 0 150px 0 20px;
+        position: relative;
+        font-size: 12px;
+    }
+    .banner .bannerLeft li>span::after{
+        /* 利用伪元素选择器实现大于号 */
+        content: "";
+        /* display: inline-block; */
+        position: absolute;
+        width: 6px;
+        height: 6px;
+        border: 2px solid #ccc;
+        border-color: #ccc #ccc transparent transparent;
+        transform: rotate(45deg);
+        right: 20px;
+        top: 16px;
+    }
+    .banner .bannerLeft li>div{
+        display: none;
+        width: 300px;
+        height: 460px;
+        line-height: 460px;
+        position: absolute;
+        left: 236px;
+        top: 0;
+        background: #FFF;
+        text-align: center;
+        font-size: 50px;
+        color: #000;
+    }
+    .banner .bannerLeft li:hover>div{
+        display: block;
+    }
+    .banner .bannerLeft li:hover span{
+      background-color: #ff6700;
+
+    }
+    /* cont start */
+    .cont{}
+    .cont h3{
+        line-height: 50px;
+        font-weight: normal;
+        /* normal=400 */
+
+    }
+    .cont h3 a{
+        padding-right: 25px;
+        float: right;
+        text-decoration: none;
+        color: #333;
+        font-size: 14px;
+        position: relative;
+    }
+    .cont h3 a::after{
+        position: absolute;
+        display: inline-block;
+        content: "";
+        width: 5px;
+        height: 5px;
+        border: 2px solid red;
+        border-color: red red transparent transparent;
+        right:10px;
+        top:50%;
+        transform: rotate(45deg) translateY(-50%);
+    }
+    .cont h3 a::before{
+        position: absolute;
+        display: block;
+        right: 0;
+        content: "";
+        width: 20px;
+        height:20px;
+        background: pink;
+        border-radius: 50%;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .cont h3 a{
+        color: #424242; 
+    }
+    .cont h3 a:hover {
+        color: #f1671b;
+    }
+ 
+    .cont .contLeft{
+        float: left;
+        width: 234px;
+    }
+    .cont .contRight{
+        float: left;
+        width: 992px;
+        background: #fff;
+    }
+    .cont .contRight li{
+        background: #FFF;
+        width: 23%;
+        float: left;
+        margin-left: 2%;
+        margin-bottom: 20px;
+        position: relative;
+        text-align: center;
+        padding: 0 10px;
+        box-sizing: border-box;
+        /* 怪异盒模型 width 表示盒子的大小 内容宽
+           左右 padding border正常盒模型 width 表示内容的宽度 */
+    }
+    .cont .contRight li:hover{
+        cursor: pointer;
+        box-shadow:  0 0 10px 4px #ccc;
+        transform: translateY(-3px)
+     }
+     .cont .contRight li span{
+          position: absolute; 
+          background: #83c44e;
+          color: #FFF;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 64px;
+          height: 20px;
+          font-size: 12px;
+          line-height: 20px;
+          text-align: center;
+     }
+     .cont .contRight li img{
+         width: 160px;
+         margin-top: 20px;
+     }
+    .cont .contRight li .j2{
+        background:#e53935;
+           }
+
+    .cont .contRight li .j{
+        font-size: 14px;
+        font-weight: 400px;
+        text-align: center;
+        color: #333;   
+        white-space: nowrap; 
+        overflow: hidden;
+        line-height: 56px;
+    }
+    .cont .contRight li .desc{
+        margin: 0 10px 10px;
+        height: 18px;
+        font-size: 12px;
+        text-align: center;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        color: #b0b0b0;
+    }
+    .cont .contRight li .price{
+        display: block;
+        font-size: 14px;
+        text-align: center;
+        color: #ff6700;
+        margin: 0 10px 14px;
+    }
+    .cont .contRight li .num{
+        color: #b0b0b0;
+        text-align: center;
+        font-size: 14px;
+        padding: 0 10px 16px;
+        display: inline;
+    
+    }
+    .cont .contRight li:nth-child(5),
+    .cont .contRight li:nth-child(6),
+    .cont .contRight li:nth-child(7),
+    .cont .contRight li:nth-child(8){
+        margin-bottom:0;
+    }
+
+    /* footer start*/
+    .footer{}
+    .footer .service{
+        text-align: center;
+        color: #333;
+        background-color: #fff;
+        min-width: 1226px;
+        padding: 27px 0;
+        border-bottom: 1px solid #e0e0e0;
+    }
+    .footer .service .list li:nth-child(1){
+        border-left: none;
+        background: url(../img/bans.png) no-repeat 40px;
+        background-size: 25px 25px;
+      
+    }
+    .footer .service .list li:nth-child(1):hover{
+        background: url(../img/bans2.png) no-repeat 40px;
+        background-size: 25px 25px;
+    }
+    
+     .footer .service .list li:nth-child(2){
+         background: url(../img/7.png) no-repeat 30px;
+        background-size: 25px 25px;
+     
+    } 
+     .footer .service .list li:nth-child(2):hover{
+         background: url(../img/72.png) no-repeat 30px;
+        background-size: 25px 25px;
+     
+    } 
+    .footer .service .list li:nth-child(3){
+         background: url(../img/15.png) no-repeat 40px;
+        background-size: 25px 25px;
+       
+    }
+    .footer .service .list li:nth-child(3):hover{
+        background: url(../img/152.png) no-repeat 40px;
+        background-size: 25px 25px;
+       
+    }
+    
+    .footer .service .list li:nth-child(4){
+         background: url(../img/liwu.png) no-repeat 40px;
+        background-size: 25px 25px;
+    }
+    .footer .service .list li:nth-child(4):hover{
+         background: url(../img/luwu2.png) no-repeat 40px;
+        background-size: 25px 25px;
+    }
+        
+     .footer .service .list li:nth-child(5){
+        background: url(../img/weizhi.png) no-repeat 30px;
+        background-size: 25px 25px;
+    } 
+     .footer .service .list li:nth-child(5):hover{
+        background: url(../img/weizhi2.png) no-repeat 30px;
+        background-size: 25px 25px;
+    } 
+    .footer .service .list{
+        position: relative;
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+    }
+    .footer .service .list li{
+        float: left;
+        width: 19.8%;
+        height: 25px;
+        border-left: 1px solid #e0e0e0;
+        font-size: 16px;
+        line-height: 25px;
+        text-align: center;
+    }
+    .footer .service .list a{
+        color: #333;
+    }
+    .footer .service .list li:hover a{
+        color: #f1671b;
+        cursor: pointer;
+    }
+    .footer .links{
+        padding: 40px 0;
+        display: block;
+        font: 14px;
+        color: #333;
+        background-color: #fff;
+        min-width: 1226px;
+    }
+     .footer .links .first{    
+        float: left;
+        width: 160px;
+        height: 112px;
+        margin: 0;
+        display: block;
+     }
+     .footer .links .first dt{
+        margin: -1px 0 26px;
+        font-size: 14px;
+        line-height: 1.25;
+        color: #424242;
+        display: block;
+     }
+     .footer .links .first dd{
+        display: block;
+        color: #333;
+        background-color: #fff;
+        margin: 10px 0 0;
+        font-size: 12px;
+    }
+    .footer .links .col-links{
+        margin: -1px 0 26px;
+        font-size: 14px;
+        line-height: 1.25;
+        color: #424242;
+        float: left;
+        width: 160px;
+        height: 112px;
+        margin: 0;
+    }
+    .footer .links .col-links dt{
+        margin: -1px 0 26px;
+        font-size: 14px;
+        line-height: 1.25;
+        color: #424242;
+        display: block;    
+    }
+    .footer .links .col-links dd{
+        display: block;
+        color: #333;
+        background-color: #fff;
+        margin: 10px 0 0;
+        font-size: 12px;
+    }
+    .footer .links a{
+        color: #424242;
+    }
+    .footer .links a:hover{
+        color: #f1671b;
+        cursor: pointer;
+    }
+     .clearfix:before, .clearfix:after {
+        content: " ";
+        display: table;
+    } 
+    .footer .col-contact{
+        float: right;
+        width: 251px;
+        height: 112px;
+        border-left: 1px solid #e0e0e0;
+        text-align: center;
+        color: #616161;
+    }
+    .footer .col-contact .phone{
+        margin: 0 0 5px;
+        font-size: 22px;
+        line-height: 1;
+        color: #ff6700;
+    }
+    .footer .col-contact p{
+        margin: 0 0 16px;
+        font-size: 12px;
+    }
+    .footer .col-contact .btn-small{    
+        display: inline-block;
+       text-align: center;
+        width: 118px;
+        height: 28px;
+        font-size: 12px;
+        line-height: 28px;
+        color: #ff6700;
+        border: 1px solid #f1671b;   
+        background: #fff url(../img/xiaoxi2.png) no-repeat 15px 6px;
+        background-size: 20px 20px;
+       }
+       .footer .col-contact .btn-small:hover{   
+        background:#ff6700 url(../img/xiaoxi.png) no-repeat 17px 8px;
+        background-size: 14px 14px;
+        color:  #fff;
+       }
+   .footer .col-contact a:hover{
+    
+   }
